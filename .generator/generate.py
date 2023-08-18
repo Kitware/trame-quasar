@@ -1,27 +1,23 @@
-import re
 import json
 import yaml
 from pathlib import Path
+from trame.tools.widgets.utils import camel_to_dash, attr_to_py
 
-camel_pattern = re.compile(r"(?<!^)(?=[A-Z])")
 
 ROOT = Path(__file__).parent.parent.absolute()
 SETTINGS = ROOT / ".generator/settings"
 API_DIRECTORY = ROOT / ".download/dist/api"
 
-MODULE_CONFIG = yaml.safe_load((SETTINGS / "default.yaml").read_text(encoding="utf-8"))
-
-
-def name_to_vue(value):
-    return camel_pattern.sub("-", value).lower()
-
-
-def attr_to_py(value):
-    py_name = value.replace("-", "_")
-    if "." in value or ":" in value:
-        py_name = py_name.replace(".", "_").replace(":", "_")
-        return [py_name, value]
-    return py_name
+MODULE_CONFIG = {
+    "scripts": [
+        "https://cdn.jsdelivr.net/npm/quasar@2.12.4/dist/quasar.umd.prod.js",
+    ],
+    "styles": [
+        "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons",
+        "https://cdn.jsdelivr.net/npm/quasar@2.12.4/dist/quasar.prod.css",
+    ],
+    "vue_use": ["Quasar"],
+}
 
 
 def generate_config():
@@ -32,12 +28,12 @@ def generate_config():
         class_name = file_entry.stem
         entry_type = entry_config.get("type")
         if entry_type == "directive":
-            all_directives.append(f"v-{name_to_vue(class_name)}")
+            all_directives.append(f"v-{camel_to_dash(class_name)}")
         elif entry_type == "component":
             properties = []
             events = []
             widgets[class_name] = {
-                "component": name_to_vue(class_name),
+                "component": camel_to_dash(class_name),
                 "properties": properties,
                 "events": events,
             }
