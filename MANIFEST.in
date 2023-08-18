@@ -1,0 +1,2 @@
+graft trame_quasar/module/quasar/vue3
+include trame_quasar/LICENSE

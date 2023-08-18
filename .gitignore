@@ -3,3 +3,4 @@
 config.yaml
 trame
 trame_quasar
+*.egg-info

@@ -1,0 +1,15 @@
+{
+    "config": {
+      "brand": {
+        "primary": "#6fa0d1",
+        "secondary": "#6bb5ae",
+        "accent": "#d27ee0",
+        "dark": "#454545",
+        "dark-page": "#121212",
+        "positive": "#7cc48d",
+        "negative": "#f26374",
+        "info": "#8fe2f2",
+        "warning": "#f2d072"
+      }
+    }
+  }
