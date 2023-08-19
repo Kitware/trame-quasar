@@ -47,6 +47,11 @@ jobs:
           bash .generator/run.sh
           black trame trame_quasar
 
+      - run: |
+          pip install pre-commit
+          pre-commit install
+          pre-commit run --all-files
+
       - name: Python Semantic Release
         uses: relekang/python-semantic-release@v7.34.6
         with:
