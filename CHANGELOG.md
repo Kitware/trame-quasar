@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2023-08-25)
+
+### Feature
+
+* **Layout:** Add trame.ui.quasar.QLayout ([`62d1cd8`](https://github.com/Kitware/trame-quasar/commit/62d1cd890d9ba7878958631f81d1fa6edf76e00d))
+
 ## v0.1.0 (2023-08-19)
 
 ### Feature
