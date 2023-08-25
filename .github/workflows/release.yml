@@ -41,15 +41,15 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r .generator/requirements.txt
+          pip install pre-commit
 
       - name: Generate Quasar
         run: |
           bash .generator/run.sh
           black trame trame_quasar
 
-      - run: |
-          pip install pre-commit
-          pre-commit install
+      - name: Pre-commit
+        run: |
           pre-commit run --all-files
 
       - name: Python Semantic Release
