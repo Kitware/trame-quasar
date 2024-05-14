@@ -28,7 +28,7 @@ MODULE_CONFIG = {
         ),
     ],
     "styles": [
-        "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons",
+        "fonts.css",
         "https://cdn.jsdelivr.net/npm/quasar@2.12.4/dist/quasar.prod.css",
     ],
     "vue_use": ["Quasar"],
