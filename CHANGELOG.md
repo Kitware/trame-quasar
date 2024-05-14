@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2024-05-14)
+
+### Fix
+
+* **assets:** Download fonts as offline assets ([`7bae114`](https://github.com/Kitware/trame-quasar/commit/7bae114feb4f6aef764d6228d065c830f3fc97d6))
+
 ## v0.2.0 (2023-08-25)
 
 ### Feature
