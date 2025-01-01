@@ -1,4 +1,6 @@
-Quasar widget for trame
+.. |pypi_download| image:: https://img.shields.io/pypi/dm/trame-quasar
+
+Quasar widget for trame |pypi_download|
 ===========================================================================
 
 Trame bundle for the Quasar Vue library.
