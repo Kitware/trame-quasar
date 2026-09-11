@@ -1,4 +1,4 @@
-.. |pypi_download| image:: https://img.shields.io/pypi/dm/trame-quasar
+.. |pypi_download| image:: https://kitware.github.io/trame/downloads/trame-quasar.svg
 
 Quasar widget for trame |pypi_download|
 ===========================================================================
